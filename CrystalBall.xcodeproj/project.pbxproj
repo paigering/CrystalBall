@@ -21,6 +21,9 @@
 		2295C24D186F2907005721F9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2295C22F186F2906005721F9 /* UIKit.framework */; };
 		2295C255186F2907005721F9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2295C253186F2907005721F9 /* InfoPlist.strings */; };
 		2295C257186F2907005721F9 /* CrystalBallTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2295C256186F2907005721F9 /* CrystalBallTests.m */; };
+		2295C262186F7322005721F9 /* PRCrystalBall.m in Sources */ = {isa = PBXBuildFile; fileRef = 2295C261186F7322005721F9 /* PRCrystalBall.m */; };
+		2295C264186FB6FE005721F9 /* crystal_ball.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2295C263186FB6FE005721F9 /* crystal_ball.mp3 */; };
+		2295C266186FB774005721F9 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2295C265186FB774005721F9 /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,10 @@
 		2295C252186F2907005721F9 /* CrystalBallTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CrystalBallTests-Info.plist"; sourceTree = "<group>"; };
 		2295C254186F2907005721F9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2295C256186F2907005721F9 /* CrystalBallTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CrystalBallTests.m; sourceTree = "<group>"; };
+		2295C260186F7322005721F9 /* PRCrystalBall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRCrystalBall.h; sourceTree = "<group>"; };
+		2295C261186F7322005721F9 /* PRCrystalBall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRCrystalBall.m; sourceTree = "<group>"; };
+		2295C263186FB6FE005721F9 /* crystal_ball.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = crystal_ball.mp3; sourceTree = "<group>"; };
+		2295C265186FB774005721F9 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2295C266186FB774005721F9 /* AudioToolbox.framework in Frameworks */,
 				2295C22E186F2906005721F9 /* CoreGraphics.framework in Frameworks */,
 				2295C230186F2906005721F9 /* UIKit.framework in Frameworks */,
 				2295C22C186F2906005721F9 /* Foundation.framework in Frameworks */,
@@ -101,6 +109,7 @@
 		2295C22A186F2906005721F9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2295C265186FB774005721F9 /* AudioToolbox.framework */,
 				2295C22B186F2906005721F9 /* Foundation.framework */,
 				2295C22D186F2906005721F9 /* CoreGraphics.framework */,
 				2295C22F186F2906005721F9 /* UIKit.framework */,
@@ -112,13 +121,14 @@
 		2295C231186F2906005721F9 /* CrystalBall */ = {
 			isa = PBXGroup;
 			children = (
-				2295C23A186F2906005721F9 /* PRAppDelegate.h */,
-				2295C23B186F2906005721F9 /* PRAppDelegate.m */,
 				2295C23D186F2906005721F9 /* Main.storyboard */,
-				2295C240186F2906005721F9 /* PRViewController.h */,
 				2295C241186F2906005721F9 /* PRViewController.m */,
+				2295C240186F2906005721F9 /* PRViewController.h */,
+				2295C263186FB6FE005721F9 /* crystal_ball.mp3 */,
 				2295C243186F2906005721F9 /* Images.xcassets */,
 				2295C232186F2906005721F9 /* Supporting Files */,
+				2295C260186F7322005721F9 /* PRCrystalBall.h */,
+				2295C261186F7322005721F9 /* PRCrystalBall.m */,
 			);
 			path = CrystalBall;
 			sourceTree = "<group>";
@@ -126,6 +136,8 @@
 		2295C232186F2906005721F9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2295C23A186F2906005721F9 /* PRAppDelegate.h */,
+				2295C23B186F2906005721F9 /* PRAppDelegate.m */,
 				2295C233186F2906005721F9 /* CrystalBall-Info.plist */,
 				2295C234186F2906005721F9 /* InfoPlist.strings */,
 				2295C237186F2906005721F9 /* main.m */,
@@ -231,6 +243,7 @@
 			files = (
 				2295C244186F2906005721F9 /* Images.xcassets in Resources */,
 				2295C236186F2906005721F9 /* InfoPlist.strings in Resources */,
+				2295C264186FB6FE005721F9 /* crystal_ball.mp3 in Resources */,
 				2295C23F186F2906005721F9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2295C23C186F2906005721F9 /* PRAppDelegate.m in Sources */,
+				2295C262186F7322005721F9 /* PRCrystalBall.m in Sources */,
 				2295C242186F2906005721F9 /* PRViewController.m in Sources */,
 				2295C238186F2906005721F9 /* main.m in Sources */,
 			);
